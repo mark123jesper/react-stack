@@ -1,7 +1,7 @@
 import React, {Fragment, useEffect} from 'react'
 
 import {useDispatch} from 'react-redux'
-import {useNavigate} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 import {login, twoFactorLogin} from '../store/auth/actions'
 
@@ -87,7 +87,8 @@ const Login = () => {
                                         <AccountCircle fontSize={"medium"} style={{margin: 2}}/>
                                         <FormGroup>
                                             <FormControlLabel
-                                                control={<Checkbox checked={useRecovery} onChange={() => setUseRecovery(!useRecovery)}/>}
+                                                control={<Checkbox checked={useRecovery}
+                                                                   onChange={() => setUseRecovery(!useRecovery)}/>}
                                                 label="Label"
                                             />
                                         </FormGroup>
@@ -106,23 +107,27 @@ const Login = () => {
                             <Grid container justifyContent="center">
                                 <Stack spacing={2}>
                                     <Paper style={{padding: 5}}>
-                                        <TextField onChange={(e) => setLoginData({...loginData, email: e.target.value})}
-                                                   id="email" name="email" label="Email" size={"medium"}
-                                                   value={loginData.email}
-                                                   variant="standard"/>
-                                        <AccountCircle fontSize={"medium"} style={{margin: 2}}/>
+                                        <TextField
+                                            onChange={(e) => setLoginData({...loginData, email: e.target.value})}
+                                            id="email" name="email" label="Email" size={"medium"}
+                                            value={loginData.email}
+                                            variant="standard"
+                                            style={{width: '100%'}}/>
                                     </Paper>
                                     <Paper style={{padding: 5}}>
                                         <TextField
                                             onChange={(e) => setLoginData({...loginData, password: e.target.value})}
                                             id="password" name="password" label="Password" size={"medium"}
                                             value={loginData.password}
-                                            variant="standard"/>
-                                        <VisibilityIcon fontSize={"medium"} style={{margin: 2}}/>
+                                            variant="standard"
+                                            style={{width: '100%'}}/>
                                     </Paper>
                                     <Button variant="contained" color="primary" onClick={handleLogin}
                                             disabled={loading}>
                                         Login
+                                    </Button>
+                                    <Button component={Link} to={"/register"} variant="link" color="primary">
+                                        Don't have an account? Register here
                                     </Button>
                                 </Stack>
                             </Grid>

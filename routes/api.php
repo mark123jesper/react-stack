@@ -52,17 +52,25 @@ $limiter = config('fortify.limiters.login');
 $twoFactorLimiter = config('fortify.limiters.two-factor');
 $verificationLimiter = config('fortify.limiters.verification', '6,1');
 
+// Login...
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])
     ->middleware(array_filter([
         'guest:' . config('fortify.guard'),
         $limiter ? 'throttle:' . $limiter : null,
     ]));
 
+// Two Factor Authentication...
 Route::post('/two-factor-challenge', [TwoFactorAuthenticatedSessionController::class, 'store'])
     ->middleware(array_filter([
-        'guest:'.config('fortify.guard'),
-        $twoFactorLimiter ? 'throttle:'.$twoFactorLimiter : null,
+        'guest:' . config('fortify.guard'),
+        $twoFactorLimiter ? 'throttle:' . $twoFactorLimiter : null,
     ]));
+
+// Registration...
+if (Features::enabled(Features::registration())) {
+    Route::post('/register', [RegisteredUserController::class, 'store'])
+        ->middleware(['guest:' . config('fortify.guard')]);
+}
 
 Route::group(['middleware' => 'auth:sanctum'], function () {
     // Authentication...
@@ -84,7 +92,7 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
 
         // Disable 2FA
         Route::delete('/user/two-factor-authentication', [TwoFactorAuthenticationController::class, 'destroy'])
-            ->middleware($twoFactorMiddleware) ;
+            ->middleware($twoFactorMiddleware);
 
         // Confirm 2FA Code
         Route::post('/user/confirmed-two-factor-authentication', [ConfirmedTwoFactorAuthenticationController::class, 'store'])
@@ -122,18 +130,6 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
 //        Route::post('/reset-password', [NewPasswordController::class, 'store'])
 //            ->middleware(['guest:'.config('fortify.guard')])
 //            ->name('password.update');
-//    }
-//
-//    // Registration...
-//    if (Features::enabled(Features::registration())) {
-//        if ($enableViews) {
-//            Route::get('/register', [RegisteredUserController::class, 'create'])
-//                ->middleware(['guest:'.config('fortify.guard')])
-//                ->name('register');
-//        }
-//
-//        Route::post('/register', [RegisteredUserController::class, 'store'])
-//            ->middleware(['guest:'.config('fortify.guard')]);
 //    }
 //
 //    // Email Verification...
