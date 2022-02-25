@@ -1,6 +1,7 @@
 import React, {Fragment, useEffect} from 'react'
 import {Button, Container} from "@mui/material";
 import { Link } from "react-router-dom";
+import {isLoggedIn} from "../util/auth";
 
 const Home = () => {
     return (
@@ -14,8 +15,8 @@ const Home = () => {
                             <div className="card-body">I'm a root component!</div>
 
                             <div>
-                                <Button component={Link} to="/login" variant="link" color="primary">
-                                    Login
+                                <Button component={Link} to={isLoggedIn() ? "/dashboard" : "/login"} variant="link" color="primary">
+                                    {isLoggedIn() ? 'Go to Dashboard' :'Login'}
                                 </Button>
                             </div>
                         </div>
