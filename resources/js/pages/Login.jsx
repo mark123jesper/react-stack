@@ -1,17 +1,11 @@
 import React, {Fragment, useEffect} from 'react'
 
 import {useDispatch} from 'react-redux'
-<<<<<<< HEAD
 import {Link, useNavigate} from 'react-router-dom'
-=======
-import {useNavigate} from 'react-router-dom'
->>>>>>> d6b9254bbabc0f4be92fff2b967c9db82e98b118
 
 import {login, twoFactorLogin} from '../store/auth/actions'
 
 import {Button, Checkbox, Container, FormControlLabel, FormGroup, Grid, Paper, Stack, TextField} from '@mui/material'
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import VisibilityIcon from '@mui/icons-material/Visibility';
 import {isLoggedIn} from "../util/auth";
 
 const Login = () => {
@@ -91,12 +85,8 @@ const Login = () => {
                                         <AccountCircle fontSize={"medium"} style={{margin: 2}}/>
                                         <FormGroup>
                                             <FormControlLabel
-<<<<<<< HEAD
                                                 control={<Checkbox checked={useRecovery}
                                                                    onChange={() => setUseRecovery(!useRecovery)}/>}
-=======
-                                                control={<Checkbox checked={useRecovery} onChange={() => setUseRecovery(!useRecovery)}/>}
->>>>>>> d6b9254bbabc0f4be92fff2b967c9db82e98b118
                                                 label="Label"
                                             />
                                         </FormGroup>
@@ -115,44 +105,28 @@ const Login = () => {
                             <Grid container justifyContent="center">
                                 <Stack spacing={2}>
                                     <Paper style={{padding: 5}}>
-<<<<<<< HEAD
                                         <TextField
                                             onChange={(e) => setLoginData({...loginData, email: e.target.value})}
                                             id="email" name="email" label="Email" size={"medium"}
                                             value={loginData.email}
                                             variant="standard"
                                             style={{width: '100%'}}/>
-=======
-                                        <TextField onChange={(e) => setLoginData({...loginData, email: e.target.value})}
-                                                   id="email" name="email" label="Email" size={"medium"}
-                                                   value={loginData.email}
-                                                   variant="standard"/>
-                                        <AccountCircle fontSize={"medium"} style={{margin: 2}}/>
->>>>>>> d6b9254bbabc0f4be92fff2b967c9db82e98b118
                                     </Paper>
                                     <Paper style={{padding: 5}}>
                                         <TextField
                                             onChange={(e) => setLoginData({...loginData, password: e.target.value})}
                                             id="password" name="password" label="Password" size={"medium"}
                                             value={loginData.password}
-<<<<<<< HEAD
                                             variant="standard"
                                             style={{width: '100%'}}/>
-=======
-                                            variant="standard"/>
-                                        <VisibilityIcon fontSize={"medium"} style={{margin: 2}}/>
->>>>>>> d6b9254bbabc0f4be92fff2b967c9db82e98b118
                                     </Paper>
                                     <Button variant="contained" color="primary" onClick={handleLogin}
                                             disabled={loading}>
                                         Login
                                     </Button>
-<<<<<<< HEAD
                                     <Button component={Link} to={"/register"} variant="link" color="primary">
                                         Don't have an account? Register here
                                     </Button>
-=======
->>>>>>> d6b9254bbabc0f4be92fff2b967c9db82e98b118
                                 </Stack>
                             </Grid>
                         </Paper>
