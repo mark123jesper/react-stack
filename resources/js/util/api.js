@@ -2,6 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 const api = () => {
+
     const headers = {
         "Content-Type": "application/json",
         'Accept': 'application/json',
@@ -15,7 +16,7 @@ const api = () => {
 
     api.interceptors.response.use(response => response, error => {
         if (error.response.status === 401) {
-            window.location.href = '/login';
+            window.location.replace('/login');
             Cookies.remove('_authenticate');
             return Promise.reject();
         }
