@@ -27,6 +27,5 @@ class UserSeeder extends Seeder
             'password' => bcrypt('123456jesper'), // password
             'remember_token' => null,
         ]);
-        User::factory(10)->create();
     }
 }
