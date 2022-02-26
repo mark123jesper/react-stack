@@ -45,13 +45,14 @@ export const disable2FA = (setTwoFALoading, setHas2FA, setIsConfirmingPassword, 
     }
 }
 
-export const view2FA = (setTwoFALoading, setRecoveryCode, setIsConfirmingPassword, setConfirmationType) => {
+export const view2FA = (setTwoFALoading, setRecoveryCode, setIsConfirmingPassword, setConfirmationType, setIsViewing2FA) => {
     return async () => {
         toast.info('Processing Recovery Codes...', {autoClose: 2000});
         setTwoFALoading(true);
         await api.get('/api/user/two-factor-recovery-codes').then(res => {
             setRecoveryCode(res.data);
             setTwoFALoading(false);
+            setIsViewing2FA(true);
         }).catch(err => {
             if (err.response.status === 423) {
                 setIsConfirmingPassword(true);
@@ -89,7 +90,7 @@ export const confirmPassword = (setTwoFALoading, password, confirmationType, set
     }
 }
 
-export const confirm2FA = (setTwoFALoading, setRecoveryCode, setHas2FA, setIsConfirming2FA, setIsViewing2FA, setIsConfirmingPassword, setConfirmationType) => {
+export const confirm2FA = (setTwoFALoading, setRecoveryCode, setHas2FA, setIsConfirming2FA, setIsViewing2FA, setIsConfirmingPassword, setConfirmationType, twoFACode) => {
     return async () => {
         toast.info('Confirming 2FA...', {autoClose: 2000});
         setTwoFALoading(true);

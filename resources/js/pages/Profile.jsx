@@ -35,7 +35,7 @@ const Profile = () => {
     const [confirmationType, setConfirmationType] = React.useState('');
 
     const handleConfirm2FA = () => {
-        dispatch(confirm2FA(setTwoFALoading, setRecoveryCode, setHas2FA, setIsConfirming2FA, setIsViewing2FA, setIsConfirmingPassword, setConfirmationType));
+        dispatch(confirm2FA(setTwoFALoading, setRecoveryCode, setHas2FA, setIsConfirming2FA, setIsViewing2FA, setIsConfirmingPassword, setConfirmationType, twoFACode));
     };
 
 
@@ -52,7 +52,7 @@ const Profile = () => {
     }
 
     const handleView2FA = () => {
-        dispatch(view2FA(setTwoFALoading, setRecoveryCode, setIsConfirmingPassword, setConfirmationType))
+        dispatch(view2FA(setTwoFALoading, setRecoveryCode, setIsConfirmingPassword, setConfirmationType, setIsViewing2FA))
     }
 
     const handleLogout = () => {

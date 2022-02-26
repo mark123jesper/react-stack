@@ -28190,7 +28190,7 @@ var Profile = function Profile() {
       setConfirmationType = _React$useState26[1];
 
   var handleConfirm2FA = function handleConfirm2FA() {
-    dispatch((0,_store_two_factor_auth_actions__WEBPACK_IMPORTED_MODULE_5__.confirm2FA)(setTwoFALoading, setRecoveryCode, setHas2FA, setIsConfirming2FA, setIsViewing2FA, setIsConfirmingPassword, setConfirmationType));
+    dispatch((0,_store_two_factor_auth_actions__WEBPACK_IMPORTED_MODULE_5__.confirm2FA)(setTwoFALoading, setRecoveryCode, setHas2FA, setIsConfirming2FA, setIsViewing2FA, setIsConfirmingPassword, setConfirmationType, twoFACode));
   };
 
   var handleConfirmPassword = function handleConfirmPassword() {
@@ -28206,7 +28206,7 @@ var Profile = function Profile() {
   };
 
   var handleView2FA = function handleView2FA() {
-    dispatch((0,_store_two_factor_auth_actions__WEBPACK_IMPORTED_MODULE_5__.view2FA)(setTwoFALoading, setRecoveryCode, setIsConfirmingPassword, setConfirmationType));
+    dispatch((0,_store_two_factor_auth_actions__WEBPACK_IMPORTED_MODULE_5__.view2FA)(setTwoFALoading, setRecoveryCode, setIsConfirmingPassword, setConfirmationType, setIsViewing2FA));
   };
 
   var handleLogout = function handleLogout() {
@@ -29029,7 +29029,7 @@ var disable2FA = function disable2FA(setTwoFALoading, setHas2FA, setIsConfirming
     }, _callee2);
   }));
 };
-var view2FA = function view2FA(setTwoFALoading, setRecoveryCode, setIsConfirmingPassword, setConfirmationType) {
+var view2FA = function view2FA(setTwoFALoading, setRecoveryCode, setIsConfirmingPassword, setConfirmationType, setIsViewing2FA) {
   return /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
       while (1) {
@@ -29043,6 +29043,7 @@ var view2FA = function view2FA(setTwoFALoading, setRecoveryCode, setIsConfirming
             return _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].get('/api/user/two-factor-recovery-codes').then(function (res) {
               setRecoveryCode(res.data);
               setTwoFALoading(false);
+              setIsViewing2FA(true);
             })["catch"](function (err) {
               if (err.response.status === 423) {
                 setIsConfirmingPassword(true);
@@ -29106,7 +29107,7 @@ var confirmPassword = function confirmPassword(setTwoFALoading, password, confir
     }, _callee4);
   }));
 };
-var confirm2FA = function confirm2FA(setTwoFALoading, setRecoveryCode, setHas2FA, setIsConfirming2FA, setIsViewing2FA, setIsConfirmingPassword, setConfirmationType) {
+var confirm2FA = function confirm2FA(setTwoFALoading, setRecoveryCode, setHas2FA, setIsConfirming2FA, setIsViewing2FA, setIsConfirmingPassword, setConfirmationType, twoFACode) {
   return /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5() {
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
       while (1) {
@@ -29176,8 +29177,8 @@ var api = function api() {
     'Accept': 'application/json'
   };
   var api = axios__WEBPACK_IMPORTED_MODULE_0___default().create({
-    // baseURL: 'https://react-stack.dev',
-    baseURL: "https://react-stack-secure.herokuapp.com",
+    baseURL: 'https://react-stack.dev',
+    // baseURL: process.env.MIX_SPA_URL,
     headers: headers,
     withCredentials: true
   });
