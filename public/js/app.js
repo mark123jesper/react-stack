@@ -28790,7 +28790,7 @@ var api = function api() {
     'Accept': 'application/json'
   };
   var api = axios__WEBPACK_IMPORTED_MODULE_0___default().create({
-    baseURL: 'https://react-stack.dev',
+    baseURL: "https://react-stack-secure.herokuapp.com",
     headers: headers,
     withCredentials: true
   });
