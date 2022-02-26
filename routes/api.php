@@ -35,7 +35,7 @@ use Laravel\Fortify\Http\Controllers\VerifyEmailController;
 */
 
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::middleware(['web','auth:sanctum'])->get('/user', function (Request $request) {
     return new UserResource(Auth::user());
 });
 
