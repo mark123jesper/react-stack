@@ -9,7 +9,7 @@ const api = () => {
     };
 
     let api = axios.create({
-        baseURL: 'https://react-stack.dev',
+        baseURL: process.env.MIX_SPA_URL,
         headers: headers,
         withCredentials: true,
     });
