@@ -27180,14 +27180,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
 /* harmony import */ var _pages_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/Home */ "./resources/js/pages/Home.jsx");
 /* harmony import */ var _pages_Dashboard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/Dashboard */ "./resources/js/pages/Dashboard.jsx");
 /* harmony import */ var _pages_About__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/About */ "./resources/js/pages/About.jsx");
 /* harmony import */ var _pages_Contact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/Contact */ "./resources/js/pages/Contact.jsx");
 /* harmony import */ var _pages_Login__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/Login */ "./resources/js/pages/Login.jsx");
 /* harmony import */ var _pages_Register__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/Register */ "./resources/js/pages/Register.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _pages_Profile__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/Profile */ "./resources/js/pages/Profile.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -27200,40 +27202,44 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _APP() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Routes, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Routes, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
       exact: true,
       path: "/",
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Navigate, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Navigate, {
         to: "/home"
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
       exact: true,
       path: "/home",
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_pages_Home__WEBPACK_IMPORTED_MODULE_1__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_Home__WEBPACK_IMPORTED_MODULE_1__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
       exact: true,
       path: "/dashboard",
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_pages_Dashboard__WEBPACK_IMPORTED_MODULE_2__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_Dashboard__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
       exact: true,
       path: "/about",
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_pages_About__WEBPACK_IMPORTED_MODULE_3__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_About__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
       exact: true,
       path: "/contact",
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_pages_Contact__WEBPACK_IMPORTED_MODULE_4__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_Contact__WEBPACK_IMPORTED_MODULE_4__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
       exact: true,
       path: "/login",
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_pages_Login__WEBPACK_IMPORTED_MODULE_5__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_Login__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
       exact: true,
       path: "/register",
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_pages_Register__WEBPACK_IMPORTED_MODULE_6__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_Register__WEBPACK_IMPORTED_MODULE_6__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
+      exact: true,
+      path: "/profile",
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_Profile__WEBPACK_IMPORTED_MODULE_7__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
       path: "*",
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Navigate, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Navigate, {
         to: "/home"
       })
     })]
@@ -27301,6 +27307,291 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/two-factor-authentication/PasswordConfirmModal.jsx":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/two-factor-authentication/PasswordConfirmModal.jsx ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Modal/Modal.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Container/Container.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Paper/Paper.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Grid/Grid.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+var PasswordConfirmModal = function PasswordConfirmModal(_ref) {
+  var isConfirmingPassword = _ref.isConfirmingPassword,
+      setIsConfirmingPassword = _ref.setIsConfirmingPassword,
+      password = _ref.password,
+      setPassword = _ref.setPassword,
+      confirmPassword = _ref.confirmPassword;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    open: isConfirmingPassword,
+    onClose: function onClose() {
+      return setIsConfirmingPassword(false);
+    },
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      style: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+      },
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "modal-header",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h5", {
+            className: "modal-title",
+            children: "Confirm Password"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+            type: "button",
+            className: "close",
+            "data-dismiss": "modal",
+            "aria-label": "Close",
+            onClick: function onClick() {
+              return setIsConfirmingPassword(false);
+            },
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              "aria-hidden": "true",
+              children: "\xD7"
+            })
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          container: true,
+          spacing: 2,
+          className: "modal-body",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
+            item: true,
+            sm: 12,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+              children: "Please confirm your password to continue."
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+              onChange: function onChange(e) {
+                return setPassword(e.target.value);
+              },
+              type: "password",
+              value: password,
+              className: "form-control",
+              placeholder: "Password"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
+            item: true,
+            sm: 12,
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
+              variant: "contained",
+              color: "primary",
+              onClick: confirmPassword,
+              children: "Submit"
+            })
+          })]
+        })]
+      })
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PasswordConfirmModal);
+
+/***/ }),
+
+/***/ "./resources/js/components/two-factor-authentication/TwoFAConfirmModal.jsx":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/two-factor-authentication/TwoFAConfirmModal.jsx ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Modal/Modal.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Container/Container.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Paper/Paper.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Grid/Grid.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+var TwoFAConfirmModal = function TwoFAConfirmModal(_ref) {
+  var isConfirming2FA = _ref.isConfirming2FA,
+      setIsConfirming2FA = _ref.setIsConfirming2FA,
+      qrCode = _ref.qrCode,
+      twoFACode = _ref.twoFACode,
+      setTwoFACode = _ref.setTwoFACode,
+      confirm2FA = _ref.confirm2FA;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    open: isConfirming2FA,
+    onClose: function onClose() {
+      return setIsConfirming2FA(false);
+    },
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      style: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+      },
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "modal-header",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h5", {
+            className: "modal-title",
+            children: "Confirm 2FA Code"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+            type: "button",
+            className: "close",
+            "data-dismiss": "modal",
+            "aria-label": "Close",
+            onClick: function onClick() {
+              return setIsConfirming2FA(false);
+            },
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              "aria-hidden": "true",
+              children: "\xD7"
+            })
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          container: true,
+          spacing: 2,
+          className: "modal-body",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
+            item: true,
+            sm: 12,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+              children: "Scan the QR using Google Authenticator"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              dangerouslySetInnerHTML: {
+                __html: qrCode
+              }
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
+            item: true,
+            sm: 12,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+              children: "Please confirm using your Authenticator Code."
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+              onChange: function onChange(e) {
+                return setTwoFACode(e.target.value);
+              },
+              type: "text",
+              value: twoFACode,
+              className: "form-control",
+              placeholder: "2FA Code"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
+            item: true,
+            sm: 12,
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
+              variant: "contained",
+              color: "primary",
+              onClick: confirm2FA,
+              children: "Submit"
+            })
+          })]
+        })]
+      })
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TwoFAConfirmModal);
+
+/***/ }),
+
+/***/ "./resources/js/components/two-factor-authentication/View2FAModal.jsx":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/two-factor-authentication/View2FAModal.jsx ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Modal/Modal.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Container/Container.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Paper/Paper.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+var View2FAModal = function View2FAModal(_ref) {
+  var has2FA = _ref.has2FA,
+      isViewing2FA = _ref.isViewing2FA,
+      setIsViewing2FA = _ref.setIsViewing2FA,
+      recoveryCode = _ref.recoveryCode;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    open: has2FA && isViewing2FA,
+    onClose: function onClose() {
+      return setIsViewing2FA(false);
+    },
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      style: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+      },
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        style: {
+          width: "50%"
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "modal-header",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h5", {
+            className: "modal-title",
+            children: "2FA Authentication"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+            type: "button",
+            className: "close",
+            "data-dismiss": "modal",
+            "aria-label": "Close",
+            onClick: function onClick() {
+              return setIsViewing2FA(false);
+            },
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              "aria-hidden": "true",
+              children: "\xD7"
+            })
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "modal-body text-center",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+            children: "2FA Recovery Codes"
+          }), recoveryCode.map(function (code, index) {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("code", {
+                children: code
+              })
+            }, index);
+          })]
+        })]
+      })
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (View2FAModal);
 
 /***/ }),
 
@@ -27376,9 +27667,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Container/Container.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Skeleton/Skeleton.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Modal/Modal.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Paper/Paper.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Grid/Grid.js");
 /* harmony import */ var _util_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../util/auth */ "./resources/js/util/auth.js");
 /* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-toastify */ "./node_modules/react-toastify/dist/react-toastify.esm.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
@@ -27407,183 +27695,16 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var Dashboard = function Dashboard() {
   var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_7__.useNavigate)();
-  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
 
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0__.useState(true),
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0__.useState([]),
       _React$useState2 = _slicedToArray(_React$useState, 2),
-      isLoading = _React$useState2[0],
-      setIsLoading = _React$useState2[1];
+      user = _React$useState2[0],
+      setUser = _React$useState2[1];
 
-  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0__.useState(false),
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0__.useState(true),
       _React$useState4 = _slicedToArray(_React$useState3, 2),
-      authLoading = _React$useState4[0],
-      setAuthLoading = _React$useState4[1];
-
-  var _React$useState5 = react__WEBPACK_IMPORTED_MODULE_0__.useState([]),
-      _React$useState6 = _slicedToArray(_React$useState5, 2),
-      user = _React$useState6[0],
-      setUser = _React$useState6[1];
-
-  var _React$useState7 = react__WEBPACK_IMPORTED_MODULE_0__.useState(false),
-      _React$useState8 = _slicedToArray(_React$useState7, 2),
-      has2FA = _React$useState8[0],
-      setHas2FA = _React$useState8[1];
-
-  var _React$useState9 = react__WEBPACK_IMPORTED_MODULE_0__.useState(false),
-      _React$useState10 = _slicedToArray(_React$useState9, 2),
-      isConfirmingPassword = _React$useState10[0],
-      setIsConfirmingPassword = _React$useState10[1];
-
-  var _React$useState11 = react__WEBPACK_IMPORTED_MODULE_0__.useState(false),
-      _React$useState12 = _slicedToArray(_React$useState11, 2),
-      isConfirming2FA = _React$useState12[0],
-      setIsConfirming2FA = _React$useState12[1];
-
-  var _React$useState13 = react__WEBPACK_IMPORTED_MODULE_0__.useState(false),
-      _React$useState14 = _slicedToArray(_React$useState13, 2),
-      isViewing2FA = _React$useState14[0],
-      setIsViewing2FA = _React$useState14[1];
-
-  var _React$useState15 = react__WEBPACK_IMPORTED_MODULE_0__.useState(''),
-      _React$useState16 = _slicedToArray(_React$useState15, 2),
-      password = _React$useState16[0],
-      setPassword = _React$useState16[1];
-
-  var _React$useState17 = react__WEBPACK_IMPORTED_MODULE_0__.useState(''),
-      _React$useState18 = _slicedToArray(_React$useState17, 2),
-      twoFACode = _React$useState18[0],
-      setTwoFACode = _React$useState18[1];
-
-  var _React$useState19 = react__WEBPACK_IMPORTED_MODULE_0__.useState(),
-      _React$useState20 = _slicedToArray(_React$useState19, 2),
-      qrCode = _React$useState20[0],
-      setQrCode = _React$useState20[1];
-
-  var _React$useState21 = react__WEBPACK_IMPORTED_MODULE_0__.useState([]),
-      _React$useState22 = _slicedToArray(_React$useState21, 2),
-      recoveryCode = _React$useState22[0],
-      setRecoveryCode = _React$useState22[1];
-
-  var _React$useState23 = react__WEBPACK_IMPORTED_MODULE_0__.useState(''),
-      _React$useState24 = _slicedToArray(_React$useState23, 2),
-      confirmationType = _React$useState24[0],
-      setConfirmationType = _React$useState24[1];
-
-  var enable2FA = function enable2FA() {
-    react_toastify__WEBPACK_IMPORTED_MODULE_5__.toast.info('Processing 2FA...', {
-      autoClose: 2000
-    });
-    _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].post('/api/user/two-factor-authentication').then(function () {
-      _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].get('/api/user/two-factor-qr-code').then(function (res) {
-        setQrCode(res.data.svg);
-      })["catch"](function (err) {
-        console.log(err);
-      })["finally"](function () {
-        setIsConfirming2FA(true);
-      });
-    })["catch"](function (err) {
-      if (err.response.status === 423) {
-        setIsConfirmingPassword(true);
-        setConfirmationType('enable');
-      }
-    });
-  };
-
-  var disable2FA = function disable2FA() {
-    react_toastify__WEBPACK_IMPORTED_MODULE_5__.toast.info('Processing 2FA...', {
-      autoClose: 2000
-    });
-    _util_api__WEBPACK_IMPORTED_MODULE_2__["default"]["delete"]('/api/user/two-factor-authentication').then(function (res) {
-      console.log(res);
-      setHas2FA(false);
-    })["catch"](function (err) {
-      if (err.response.status === 423) {
-        setIsConfirmingPassword(true);
-        setConfirmationType('disable');
-      }
-    });
-  };
-
-  var view2FA = function view2FA() {
-    react_toastify__WEBPACK_IMPORTED_MODULE_5__.toast.info('Processing Recovery Codes...', {
-      autoClose: 2000
-    });
-    _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].get('/api/user/two-factor-recovery-codes').then(function (res) {
-      setRecoveryCode(res.data);
-      setIsViewing2FA(true);
-    })["catch"](function (err) {
-      if (err.response.status === 423) {
-        setIsConfirmingPassword(true);
-        setConfirmationType('view');
-      }
-    });
-  };
-
-  var confirmPassword = function confirmPassword() {
-    react_toastify__WEBPACK_IMPORTED_MODULE_5__.toast.info('Confirming Password...', {
-      autoClose: 2000
-    });
-    _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].post('/api/user/confirm-password', {
-      password: password
-    }).then(function () {
-      switch (confirmationType) {
-        case 'enable':
-          enable2FA();
-          break;
-
-        case 'disable':
-          disable2FA();
-          break;
-
-        case 'view':
-          view2FA();
-          break;
-
-        default:
-          break;
-      }
-
-      setIsConfirmingPassword(false);
-    })["catch"](function (err) {
-      react_toastify__WEBPACK_IMPORTED_MODULE_5__.toast.error('Invalid Password. Failed to Proceed', {
-        autoClose: 2000
-      });
-      console.log(err);
-    });
-  };
-
-  var confirm2FA = function confirm2FA() {
-    react_toastify__WEBPACK_IMPORTED_MODULE_5__.toast.info('Confirming 2FA...', {
-      autoClose: 2000
-    });
-    _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].post('api/user/confirmed-two-factor-authentication', {
-      "code": twoFACode
-    }).then(function () {
-      _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].get('/api/user/two-factor-recovery-codes').then(function (res) {
-        setRecoveryCode(res.data);
-        react_toastify__WEBPACK_IMPORTED_MODULE_5__.toast.success('2FA Enabled', {
-          autoClose: 2000
-        });
-        setHas2FA(true);
-        setIsConfirming2FA(false);
-        setIsViewing2FA(true);
-      })["catch"](function (err) {
-        if (err.response.status === 423) {
-          setIsConfirmingPassword(true);
-          setConfirmationType('view');
-        }
-      });
-    })["catch"](function (err) {
-      react_toastify__WEBPACK_IMPORTED_MODULE_5__.toast.error('Invalid 2FA Code. Failed to Enable', {
-        autoClose: 2000
-      });
-    });
-  };
-
-  var handleLogout = function handleLogout() {
-    setAuthLoading(true);
-    dispatch((0,_store_auth_actions__WEBPACK_IMPORTED_MODULE_3__.logout)(navigate, setAuthLoading));
-  };
+      isLoading = _React$useState4[0],
+      setIsLoading = _React$useState4[1];
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     if (!(0,_util_auth__WEBPACK_IMPORTED_MODULE_4__.isLoggedIn)()) {
@@ -27591,21 +27712,15 @@ var Dashboard = function Dashboard() {
     }
 
     _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].get('/api/user').then(function (res) {
-      var _res$data;
-
       setUser(res.data.data);
-      setHas2FA(!!(res !== null && res !== void 0 && (_res$data = res.data) !== null && _res$data !== void 0 && _res$data.data.has2FA));
     })["catch"](function (err) {
       console.log(err);
     })["finally"](function () {
       setIsLoading(false);
     });
   }, []);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    console.log(confirmationType);
-  }, [confirmationType]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
         className: "row justify-content-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
@@ -27622,7 +27737,7 @@ var Dashboard = function Dashboard() {
               className: "card-body",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("h5", {
                 className: "card-title",
-                children: ["Hi, ", user.first_name, "!"]
+                children: ["Hi, ", user.first_name, " ", user.middle_name[0], ". ", user.last_name, "!"]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
                 component: react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Link,
                 to: "/home",
@@ -27630,209 +27745,19 @@ var Dashboard = function Dashboard() {
                 color: "primary",
                 children: "Go to Home"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
-                onClick: has2FA ? disable2FA : enable2FA,
+                component: react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Link,
+                to: "/profile",
                 variant: "link",
                 color: "primary",
-                children: has2FA ? 'Disable 2FA' : 'Enable 2FA'
-              }), has2FA && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
-                onClick: view2FA,
-                variant: "link",
-                color: "primary",
-                children: "View Recovery Codes"
+                children: "Go to Profile"
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-              className: "card-body",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
-                variant: "contained",
-                color: "primary",
-                onClick: handleLogout,
-                disabled: authLoading,
-                children: "Logout"
-              })
+              className: "card-body"
             })]
           })
         })
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-      open: isConfirmingPassword,
-      onClose: function onClose() {
-        return setIsConfirmingPassword(false);
-      },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        style: {
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center"
-        },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-            className: "modal-header",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h5", {
-              className: "modal-title",
-              children: "Confirm Password"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
-              type: "button",
-              className: "close",
-              "data-dismiss": "modal",
-              "aria-label": "Close",
-              onClick: function onClick() {
-                return setIsConfirmingPassword(false);
-              },
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-                "aria-hidden": "true",
-                children: "\xD7"
-              })
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-            container: true,
-            spacing: 2,
-            className: "modal-body",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-              item: true,
-              sm: 12,
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-                children: "Please confirm your password to continue."
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
-                onChange: function onChange(e) {
-                  return setPassword(e.target.value);
-                },
-                type: "password",
-                value: password,
-                className: "form-control",
-                placeholder: "Password"
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-              item: true,
-              sm: 12,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
-                variant: "contained",
-                color: "primary",
-                onClick: confirmPassword,
-                children: "Submit"
-              })
-            })]
-          })]
-        })
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-      open: isConfirming2FA,
-      onClose: function onClose() {
-        return setIsConfirming2FA(false);
-      },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        style: {
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center"
-        },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-            className: "modal-header",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h5", {
-              className: "modal-title",
-              children: "Confirm 2FA Code"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
-              type: "button",
-              className: "close",
-              "data-dismiss": "modal",
-              "aria-label": "Close",
-              onClick: function onClick() {
-                return setIsConfirming2FA(false);
-              },
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-                "aria-hidden": "true",
-                children: "\xD7"
-              })
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-            container: true,
-            spacing: 2,
-            className: "modal-body",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-              item: true,
-              sm: 12,
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-                children: "Scan the QR using Google Authenticator"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-                dangerouslySetInnerHTML: {
-                  __html: qrCode
-                }
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-              item: true,
-              sm: 12,
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-                children: "Please confirm using your Authenticator Code."
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
-                onChange: function onChange(e) {
-                  return setTwoFACode(e.target.value);
-                },
-                type: "text",
-                value: twoFACode,
-                className: "form-control",
-                placeholder: "2FA Code"
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-              item: true,
-              sm: 12,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
-                variant: "contained",
-                color: "primary",
-                onClick: confirm2FA,
-                children: "Submit"
-              })
-            })]
-          })]
-        })
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-      open: has2FA && isViewing2FA,
-      onClose: function onClose() {
-        return setIsViewing2FA(false);
-      },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        style: {
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center"
-        },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
-          style: {
-            width: "50%"
-          },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-            className: "modal-header",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h5", {
-              className: "modal-title",
-              children: "2FA Authentication"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
-              type: "button",
-              className: "close",
-              "data-dismiss": "modal",
-              "aria-label": "Close",
-              onClick: function onClick() {
-                return setIsViewing2FA(false);
-              },
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-                "aria-hidden": "true",
-                children: "\xD7"
-              })
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-            className: "modal-body text-center",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-              children: "2FA Recovery Codes"
-            }), recoveryCode.map(function (code, index) {
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("code", {
-                  children: code
-                })
-              }, index);
-            })]
-          })]
-        })
-      })
-    })]
+    })
   });
 };
 
@@ -28140,6 +28065,247 @@ var Login = function Login() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Login);
+
+/***/ }),
+
+/***/ "./resources/js/pages/Profile.jsx":
+/*!****************************************!*\
+  !*** ./resources/js/pages/Profile.jsx ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+/* harmony import */ var _util_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/api */ "./resources/js/util/api.js");
+/* harmony import */ var _util_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../util/auth */ "./resources/js/util/auth.js");
+/* harmony import */ var _store_auth_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/auth/actions */ "./resources/js/store/auth/actions.js");
+/* harmony import */ var _store_two_factor_auth_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../store/two-factor-auth/actions */ "./resources/js/store/two-factor-auth/actions.js");
+/* harmony import */ var _components_two_factor_authentication_PasswordConfirmModal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/two-factor-authentication/PasswordConfirmModal */ "./resources/js/components/two-factor-authentication/PasswordConfirmModal.jsx");
+/* harmony import */ var _components_two_factor_authentication_View2FAModal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/two-factor-authentication/View2FAModal */ "./resources/js/components/two-factor-authentication/View2FAModal.jsx");
+/* harmony import */ var _components_two_factor_authentication_TwoFAConfirmModal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/two-factor-authentication/TwoFAConfirmModal */ "./resources/js/components/two-factor-authentication/TwoFAConfirmModal.jsx");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Container/Container.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Skeleton/Skeleton.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var Profile = function Profile() {
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_10__.useNavigate)();
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
+
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0__.useState(true),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      isLoading = _React$useState2[0],
+      setIsLoading = _React$useState2[1];
+
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0__.useState(false),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      authLoading = _React$useState4[0],
+      setAuthLoading = _React$useState4[1];
+
+  var _React$useState5 = react__WEBPACK_IMPORTED_MODULE_0__.useState(false),
+      _React$useState6 = _slicedToArray(_React$useState5, 2),
+      twoFALoading = _React$useState6[0],
+      setTwoFALoading = _React$useState6[1];
+
+  var _React$useState7 = react__WEBPACK_IMPORTED_MODULE_0__.useState([]),
+      _React$useState8 = _slicedToArray(_React$useState7, 2),
+      user = _React$useState8[0],
+      setUser = _React$useState8[1];
+
+  var _React$useState9 = react__WEBPACK_IMPORTED_MODULE_0__.useState(false),
+      _React$useState10 = _slicedToArray(_React$useState9, 2),
+      has2FA = _React$useState10[0],
+      setHas2FA = _React$useState10[1];
+
+  var _React$useState11 = react__WEBPACK_IMPORTED_MODULE_0__.useState(false),
+      _React$useState12 = _slicedToArray(_React$useState11, 2),
+      isConfirmingPassword = _React$useState12[0],
+      setIsConfirmingPassword = _React$useState12[1];
+
+  var _React$useState13 = react__WEBPACK_IMPORTED_MODULE_0__.useState(false),
+      _React$useState14 = _slicedToArray(_React$useState13, 2),
+      isConfirming2FA = _React$useState14[0],
+      setIsConfirming2FA = _React$useState14[1];
+
+  var _React$useState15 = react__WEBPACK_IMPORTED_MODULE_0__.useState(false),
+      _React$useState16 = _slicedToArray(_React$useState15, 2),
+      isViewing2FA = _React$useState16[0],
+      setIsViewing2FA = _React$useState16[1];
+
+  var _React$useState17 = react__WEBPACK_IMPORTED_MODULE_0__.useState(),
+      _React$useState18 = _slicedToArray(_React$useState17, 2),
+      qrCode = _React$useState18[0],
+      setQrCode = _React$useState18[1];
+
+  var _React$useState19 = react__WEBPACK_IMPORTED_MODULE_0__.useState([]),
+      _React$useState20 = _slicedToArray(_React$useState19, 2),
+      recoveryCode = _React$useState20[0],
+      setRecoveryCode = _React$useState20[1];
+
+  var _React$useState21 = react__WEBPACK_IMPORTED_MODULE_0__.useState(''),
+      _React$useState22 = _slicedToArray(_React$useState21, 2),
+      password = _React$useState22[0],
+      setPassword = _React$useState22[1];
+
+  var _React$useState23 = react__WEBPACK_IMPORTED_MODULE_0__.useState(''),
+      _React$useState24 = _slicedToArray(_React$useState23, 2),
+      twoFACode = _React$useState24[0],
+      setTwoFACode = _React$useState24[1];
+
+  var _React$useState25 = react__WEBPACK_IMPORTED_MODULE_0__.useState(''),
+      _React$useState26 = _slicedToArray(_React$useState25, 2),
+      confirmationType = _React$useState26[0],
+      setConfirmationType = _React$useState26[1];
+
+  var handleConfirm2FA = function handleConfirm2FA() {
+    dispatch((0,_store_two_factor_auth_actions__WEBPACK_IMPORTED_MODULE_5__.confirm2FA)(setTwoFALoading, setRecoveryCode, setHas2FA, setIsConfirming2FA, setIsViewing2FA, setIsConfirmingPassword, setConfirmationType));
+  };
+
+  var handleConfirmPassword = function handleConfirmPassword() {
+    dispatch((0,_store_two_factor_auth_actions__WEBPACK_IMPORTED_MODULE_5__.confirmPassword)(setTwoFALoading, password, confirmationType, setIsConfirmingPassword));
+  };
+
+  var handleEnable = function handleEnable() {
+    dispatch((0,_store_two_factor_auth_actions__WEBPACK_IMPORTED_MODULE_5__.enable2FA)(setTwoFALoading, setQrCode, setIsConfirming2FA, setIsConfirmingPassword, setConfirmationType));
+  };
+
+  var handleDisable = function handleDisable() {
+    dispatch((0,_store_two_factor_auth_actions__WEBPACK_IMPORTED_MODULE_5__.disable2FA)(setTwoFALoading, setHas2FA, setIsConfirmingPassword, setConfirmationType));
+  };
+
+  var handleView2FA = function handleView2FA() {
+    dispatch((0,_store_two_factor_auth_actions__WEBPACK_IMPORTED_MODULE_5__.view2FA)(setTwoFALoading, setRecoveryCode, setIsConfirmingPassword, setConfirmationType));
+  };
+
+  var handleLogout = function handleLogout() {
+    dispatch((0,_store_auth_actions__WEBPACK_IMPORTED_MODULE_4__.logout)(navigate, setAuthLoading));
+  };
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (!(0,_util_auth__WEBPACK_IMPORTED_MODULE_3__.isLoggedIn)()) {
+      navigate('/login');
+    }
+
+    _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].get('/api/user').then(function (res) {
+      var _res$data;
+
+      setUser(res.data.data);
+      setHas2FA(!!(res !== null && res !== void 0 && (_res$data = res.data) !== null && _res$data !== void 0 && _res$data.data.has2FA));
+    })["catch"](function (err) {
+      console.log(err);
+    })["finally"](function () {
+      setIsLoading(false);
+    });
+  }, []);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    console.log(confirmationType);
+  }, [confirmationType]);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+        className: "row justify-content-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+          className: "col-md-8",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+            className: "card text-center",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+              className: "card-header",
+              children: "Profile Component"
+            }), isLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+              variant: "rectangular",
+              height: 50
+            }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+              className: "card-body",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("h5", {
+                className: "card-title",
+                children: ["Hi, ", user.first_name, "!"]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+                component: react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Link,
+                to: "/home",
+                variant: "link",
+                color: "primary",
+                children: "Go to Home"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+                onClick: has2FA ? handleDisable : handleEnable,
+                variant: "link",
+                color: "primary",
+                disabled: twoFALoading,
+                children: has2FA ? 'Disable 2FA' : 'Enable 2FA'
+              }), has2FA && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+                onClick: handleView2FA,
+                variant: "link",
+                color: "primary",
+                disabled: twoFALoading,
+                children: "View Recovery Codes"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+              className: "card-body",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+                variant: "contained",
+                color: "primary",
+                onClick: handleLogout,
+                disabled: authLoading,
+                children: "Logout"
+              })
+            })]
+          })
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_two_factor_authentication_PasswordConfirmModal__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      isConfirmingPassword: isConfirmingPassword,
+      setIsConfirmingPassword: setIsConfirmingPassword,
+      password: password,
+      setPassword: setPassword,
+      confirmPassword: handleConfirmPassword
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_two_factor_authentication_TwoFAConfirmModal__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      isConfirming2FA: isConfirming2FA,
+      setIsConfirming2FA: setIsConfirming2FA,
+      qrCode: qrCode,
+      twoFACode: twoFACode,
+      setTwoFACode: setTwoFACode,
+      confirm2FA: handleConfirm2FA
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_two_factor_authentication_View2FAModal__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      has2FA: has2FA,
+      isViewing2FA: isViewing2FA,
+      setIsViewing2FA: setIsViewing2FA,
+      recoveryCode: recoveryCode
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Profile);
 
 /***/ }),
 
@@ -28684,9 +28850,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux_persist__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-persist */ "./node_modules/redux-persist/es/index.js");
 /* harmony import */ var redux_persist_lib_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-persist/lib/storage */ "./node_modules/redux-persist/lib/storage/index.js");
 /* harmony import */ var redux_persist_transform_expire_in__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-persist-transform-expire-in */ "./node_modules/redux-persist-transform-expire-in/dist/index.js");
+/* harmony import */ var redux_persist_es_storage_session__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! redux-persist/es/storage/session */ "./node_modules/redux-persist/es/storage/session.js");
 
 
  // defaults to localStorage for web
+
 
 
 
@@ -28718,12 +28886,12 @@ var composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 var enhancer = composeEnhancers(applyMiddleware(thunk));
 /**
- * Create Store 
+ * Create Store
  **/
 
 var persistedReducer = (0,redux_persist__WEBPACK_IMPORTED_MODULE_1__.persistReducer)({
   key: '_auth',
-  storage: redux_persist_lib_storage__WEBPACK_IMPORTED_MODULE_2__["default"],
+  storage: redux_persist_es_storage_session__WEBPACK_IMPORTED_MODULE_4__["default"],
   whitelist: ['auth'],
   transforms: [(0,redux_persist_transform_expire_in__WEBPACK_IMPORTED_MODULE_3__["default"])(12 * 60 * 60 * 1000, "expires_in")]
 }, _rootReducer__WEBPACK_IMPORTED_MODULE_0__["default"]);
@@ -28762,6 +28930,229 @@ var rootReducer = function rootReducer(state, action) {
 
 /***/ }),
 
+/***/ "./resources/js/store/two-factor-auth/actions.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/store/two-factor-auth/actions.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "enable2FA": () => (/* binding */ enable2FA),
+/* harmony export */   "disable2FA": () => (/* binding */ disable2FA),
+/* harmony export */   "view2FA": () => (/* binding */ view2FA),
+/* harmony export */   "confirmPassword": () => (/* binding */ confirmPassword),
+/* harmony export */   "confirm2FA": () => (/* binding */ confirm2FA)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/dist/js.cookie.mjs");
+/* harmony import */ var _util_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util/api */ "./resources/js/util/api.js");
+/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-toastify */ "./node_modules/react-toastify/dist/react-toastify.esm.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+
+/**
+ * @description - Action creator for login
+ */
+
+var enable2FA = function enable2FA(setTwoFALoading, setQrCode, setIsConfirming2FA, setIsConfirmingPassword, setConfirmationType) {
+  return /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            react_toastify__WEBPACK_IMPORTED_MODULE_3__.toast.info('Processing 2FA...', {
+              autoClose: 2000
+            });
+            setTwoFALoading(true);
+            _context.next = 4;
+            return _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].post('/api/user/two-factor-authentication').then(function () {
+              _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].get('/api/user/two-factor-qr-code').then(function (res) {
+                setQrCode(res.data.svg);
+              })["catch"](function (err) {
+                console.log(err);
+              })["finally"](function () {
+                setIsConfirming2FA(true);
+                setTwoFALoading(false);
+              });
+            })["catch"](function (err) {
+              if (err.response.status === 423) {
+                setIsConfirmingPassword(true);
+                setConfirmationType('enable');
+                setTwoFALoading(false);
+              }
+            });
+
+          case 4:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+};
+var disable2FA = function disable2FA(setTwoFALoading, setHas2FA, setIsConfirmingPassword, setConfirmationType) {
+  return /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            react_toastify__WEBPACK_IMPORTED_MODULE_3__.toast.info('Processing 2FA...', {
+              autoClose: 2000
+            });
+            setTwoFALoading(true);
+            _context2.next = 4;
+            return _util_api__WEBPACK_IMPORTED_MODULE_2__["default"]["delete"]('/api/user/two-factor-authentication').then(function () {
+              setHas2FA(false);
+              setTwoFALoading(false);
+            })["catch"](function (err) {
+              if (err.response.status === 423) {
+                setIsConfirmingPassword(true);
+                setConfirmationType('disable');
+                setTwoFALoading(false);
+              }
+            });
+
+          case 4:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+};
+var view2FA = function view2FA(setTwoFALoading, setRecoveryCode, setIsConfirmingPassword, setConfirmationType) {
+  return /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            react_toastify__WEBPACK_IMPORTED_MODULE_3__.toast.info('Processing Recovery Codes...', {
+              autoClose: 2000
+            });
+            setTwoFALoading(true);
+            _context3.next = 4;
+            return _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].get('/api/user/two-factor-recovery-codes').then(function (res) {
+              setRecoveryCode(res.data);
+              setTwoFALoading(false);
+            })["catch"](function (err) {
+              if (err.response.status === 423) {
+                setIsConfirmingPassword(true);
+                setConfirmationType('view');
+                setTwoFALoading(false);
+              }
+            });
+
+          case 4:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3);
+  }));
+};
+var confirmPassword = function confirmPassword(setTwoFALoading, password, confirmationType, setIsConfirmingPassword) {
+  return /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4() {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            react_toastify__WEBPACK_IMPORTED_MODULE_3__.toast.info('Confirming Password...', {
+              autoClose: 2000
+            });
+            setTwoFALoading(true);
+            _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].post('/user/confirm-password', {
+              password: password
+            }).then(function () {
+              switch (confirmationType) {
+                case 'enable':
+                  enable2FA();
+                  break;
+
+                case 'disable':
+                  disable2FA();
+                  break;
+
+                case 'view':
+                  view2FA();
+                  break;
+
+                default:
+                  break;
+              }
+
+              setIsConfirmingPassword(false);
+              setTwoFALoading(false);
+            })["catch"](function (err) {
+              react_toastify__WEBPACK_IMPORTED_MODULE_3__.toast.error('Invalid Password. Failed to Proceed', {
+                autoClose: 2000
+              });
+              setTwoFALoading(false);
+            });
+
+          case 3:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, _callee4);
+  }));
+};
+var confirm2FA = function confirm2FA(setTwoFALoading, setRecoveryCode, setHas2FA, setIsConfirming2FA, setIsViewing2FA, setIsConfirmingPassword, setConfirmationType) {
+  return /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5() {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
+      while (1) {
+        switch (_context5.prev = _context5.next) {
+          case 0:
+            react_toastify__WEBPACK_IMPORTED_MODULE_3__.toast.info('Confirming 2FA...', {
+              autoClose: 2000
+            });
+            setTwoFALoading(true);
+            _context5.next = 4;
+            return _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].post('api/user/confirmed-two-factor-authentication', {
+              "code": twoFACode
+            }).then(function () {
+              _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].get('/api/user/two-factor-recovery-codes').then(function (res) {
+                setRecoveryCode(res.data);
+                react_toastify__WEBPACK_IMPORTED_MODULE_3__.toast.success('2FA Enabled', {
+                  autoClose: 2000
+                });
+                setHas2FA(true);
+                setIsConfirming2FA(false);
+                setIsViewing2FA(true);
+                setTwoFALoading(false);
+              })["catch"](function (err) {
+                if (err.response.status === 423) {
+                  setIsConfirmingPassword(true);
+                  setConfirmationType('view');
+                }
+              });
+            })["catch"](function (err) {
+              react_toastify__WEBPACK_IMPORTED_MODULE_3__.toast.error('Invalid 2FA Code. Failed to Enable', {
+                autoClose: 2000
+              });
+              setTwoFALoading(false);
+            });
+
+          case 4:
+          case "end":
+            return _context5.stop();
+        }
+      }
+    }, _callee5);
+  }));
+};
+
+/***/ }),
+
 /***/ "./resources/js/util/api.js":
 /*!**********************************!*\
   !*** ./resources/js/util/api.js ***!
@@ -28785,7 +29176,8 @@ var api = function api() {
     'Accept': 'application/json'
   };
   var api = axios__WEBPACK_IMPORTED_MODULE_0___default().create({
-    baseURL: "https://react-stack-secure.herokuapp.com",
+    baseURL: 'https://react-stack.dev',
+    // baseURL: process.env.MIX_SPA_URL,
     headers: headers,
     withCredentials: true
   });
@@ -90779,6 +91171,112 @@ function autoMergeLevel2(inboundState, originalState, reducedState, _ref) {
 function isPlainEnoughObject(o) {
   return o !== null && !Array.isArray(o) && _typeof(o) === 'object';
 }
+
+/***/ }),
+
+/***/ "./node_modules/redux-persist/es/storage/createWebStorage.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/redux-persist/es/storage/createWebStorage.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ createWebStorage)
+/* harmony export */ });
+/* harmony import */ var _getStorage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getStorage */ "./node_modules/redux-persist/es/storage/getStorage.js");
+
+function createWebStorage(type) {
+  var storage = (0,_getStorage__WEBPACK_IMPORTED_MODULE_0__["default"])(type);
+  return {
+    getItem: function getItem(key) {
+      return new Promise(function (resolve, reject) {
+        resolve(storage.getItem(key));
+      });
+    },
+    setItem: function setItem(key, item) {
+      return new Promise(function (resolve, reject) {
+        resolve(storage.setItem(key, item));
+      });
+    },
+    removeItem: function removeItem(key) {
+      return new Promise(function (resolve, reject) {
+        resolve(storage.removeItem(key));
+      });
+    }
+  };
+}
+
+/***/ }),
+
+/***/ "./node_modules/redux-persist/es/storage/getStorage.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/redux-persist/es/storage/getStorage.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ getStorage)
+/* harmony export */ });
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function noop() {}
+
+var noopStorage = {
+  getItem: noop,
+  setItem: noop,
+  removeItem: noop
+};
+
+function hasStorage(storageType) {
+  if ((typeof self === "undefined" ? "undefined" : _typeof(self)) !== 'object' || !(storageType in self)) {
+    return false;
+  }
+
+  try {
+    var storage = self[storageType];
+    var testKey = "redux-persist ".concat(storageType, " test");
+    storage.setItem(testKey, 'test');
+    storage.getItem(testKey);
+    storage.removeItem(testKey);
+  } catch (e) {
+    if (true) console.warn("redux-persist ".concat(storageType, " test failed, persistence will be disabled."));
+    return false;
+  }
+
+  return true;
+}
+
+function getStorage(type) {
+  var storageType = "".concat(type, "Storage");
+  if (hasStorage(storageType)) return self[storageType];else {
+    if (true) {
+      console.error("redux-persist failed to create sync storage. falling back to noop storage.");
+    }
+
+    return noopStorage;
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/redux-persist/es/storage/session.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/redux-persist/es/storage/session.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _createWebStorage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createWebStorage */ "./node_modules/redux-persist/es/storage/createWebStorage.js");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_createWebStorage__WEBPACK_IMPORTED_MODULE_0__["default"])('session'));
 
 /***/ }),
 
