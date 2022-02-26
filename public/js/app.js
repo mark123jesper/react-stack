@@ -28055,7 +28055,7 @@ var Login = function Login() {
                       return setUseRecovery(!useRecovery);
                     }
                   }),
-                  label: "Label"
+                  label: "Use Recovery Code"
                 })
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
