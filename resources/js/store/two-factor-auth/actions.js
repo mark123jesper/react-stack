@@ -66,7 +66,7 @@ export const confirmPassword = (setTwoFALoading, password, confirmationType, set
     return async () => {
         toast.info('Confirming Password...', {autoClose: 2000});
         setTwoFALoading(true);
-        api.post('/user/confirm-password', {password: password}).then(() => {
+        api.post('/api/user/confirm-password', {password: password}).then(() => {
             switch (confirmationType) {
                 case 'enable':
                     enable2FA();

@@ -29069,7 +29069,7 @@ var confirmPassword = function confirmPassword(setTwoFALoading, password, confir
               autoClose: 2000
             });
             setTwoFALoading(true);
-            _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].post('/user/confirm-password', {
+            _util_api__WEBPACK_IMPORTED_MODULE_2__["default"].post('/api/user/confirm-password', {
               password: password
             }).then(function () {
               switch (confirmationType) {
@@ -29176,8 +29176,8 @@ var api = function api() {
     'Accept': 'application/json'
   };
   var api = axios__WEBPACK_IMPORTED_MODULE_0___default().create({
-    baseURL: 'https://react-stack.dev',
-    // baseURL: process.env.MIX_SPA_URL,
+    // baseURL: 'https://react-stack.dev',
+    baseURL: "https://react-stack-secure.herokuapp.com",
     headers: headers,
     withCredentials: true
   });
