@@ -11,6 +11,7 @@ import PasswordConfirmModal from "../components/two-factor-authentication/Passwo
 import View2FAModal from "../components/two-factor-authentication/View2FAModal";
 import TwoFAConfirmModal from "../components/two-factor-authentication/TwoFAConfirmModal";
 import {Button, Container, Skeleton} from "@mui/material";
+import {toast} from "react-toastify";
 
 const Profile = () => {
     const navigate = useNavigate();
@@ -40,7 +41,28 @@ const Profile = () => {
 
 
     const handleConfirmPassword = () => {
-        dispatch(confirmPassword(setTwoFALoading, password, confirmationType, setIsConfirmingPassword))
+        toast.info('Confirming Password...', {autoClose: 2000});
+        setTwoFALoading(true);
+        api.post('/api/user/confirm-password', {password: password}).then(() => {
+            switch (confirmationType) {
+                case 'enable':
+                    dispatch(enable2FA(setTwoFALoading, setQrCode, setIsConfirming2FA, setIsConfirmingPassword, setConfirmationType));
+                    break;
+                case 'disable':
+                    dispatch(disable2FA(setTwoFALoading, setHas2FA, setIsConfirmingPassword, setConfirmationType));
+                    break;
+                case 'view':
+                    dispatch(view2FA(setTwoFALoading, setRecoveryCode, setIsConfirmingPassword, setConfirmationType, setIsViewing2FA))
+                    break;
+                default:
+                    break;
+            }
+            setIsConfirmingPassword(false);
+            setTwoFALoading(false);
+        }).catch(err => {
+            toast.error('Invalid Password. Failed to Proceed', {autoClose: 2000});
+            setTwoFALoading(false);
+        })
     }
 
     const handleEnable = () => {

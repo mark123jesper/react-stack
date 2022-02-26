@@ -63,33 +63,6 @@ export const view2FA = (setTwoFALoading, setRecoveryCode, setIsConfirmingPasswor
     }
 }
 
-export const confirmPassword = (setTwoFALoading, password, confirmationType, setIsConfirmingPassword) => {
-    return async () => {
-        toast.info('Confirming Password...', {autoClose: 2000});
-        setTwoFALoading(true);
-        api.post('/api/user/confirm-password', {password: password}).then(() => {
-            switch (confirmationType) {
-                case 'enable':
-                    enable2FA();
-                    break;
-                case 'disable':
-                    disable2FA();
-                    break;
-                case 'view':
-                    view2FA();
-                    break;
-                default:
-                    break;
-            }
-            setIsConfirmingPassword(false);
-            setTwoFALoading(false);
-        }).catch(err => {
-            toast.error('Invalid Password. Failed to Proceed', {autoClose: 2000});
-            setTwoFALoading(false);
-        })
-    }
-}
-
 export const confirm2FA = (setTwoFALoading, setRecoveryCode, setHas2FA, setIsConfirming2FA, setIsViewing2FA, setIsConfirmingPassword, setConfirmationType, twoFACode) => {
     return async () => {
         toast.info('Confirming 2FA...', {autoClose: 2000});
