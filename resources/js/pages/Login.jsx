@@ -82,7 +82,6 @@ const Login = () => {
                                                     variant="standard"
                                                 />
                                         }
-                                        <AccountCircle fontSize={"medium"} style={{margin: 2}}/>
                                         <FormGroup>
                                             <FormControlLabel
                                                 control={<Checkbox checked={useRecovery}
