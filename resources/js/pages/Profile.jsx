@@ -5,13 +5,15 @@ import {Link, useNavigate} from "react-router-dom";
 import api from "../util/api";
 import {isLoggedIn} from "../util/auth";
 import {logout} from "../store/auth/actions";
-import {confirm2FA, confirmPassword, disable2FA, enable2FA, view2FA} from "../store/two-factor-auth/actions";
+import {confirm2FA, disable2FA, enable2FA, view2FA} from "../store/two-factor-auth/actions";
 
 import PasswordConfirmModal from "../components/two-factor-authentication/PasswordConfirmModal";
 import View2FAModal from "../components/two-factor-authentication/View2FAModal";
 import TwoFAConfirmModal from "../components/two-factor-authentication/TwoFAConfirmModal";
-import {Button, Container, Skeleton} from "@mui/material";
+import {Button, Container, Divider, Grid, Skeleton, TextField} from "@mui/material";
 import {toast} from "react-toastify";
+import UpdateUser from "../components/profile-information/UpdateUser";
+import UpdatePassword from "../components/profile-information/UpdatePassword";
 
 const Profile = () => {
     const navigate = useNavigate();
@@ -22,6 +24,13 @@ const Profile = () => {
     const [twoFALoading, setTwoFALoading] = React.useState(false);
 
     const [user, setUser] = React.useState([]);
+    const [updatePassword, setUpdatePassword] = React.useState({
+        current_password: '',
+        password: '',
+        password_confirmation: '',
+    })
+    const [userError, setUserError] = React.useState([]);
+    const [passwordError, setPasswordError] = React.useState([]);
     const [has2FA, setHas2FA] = React.useState(false);
     const [isConfirmingPassword, setIsConfirmingPassword] = React.useState(false);
     const [isConfirming2FA, setIsConfirming2FA] = React.useState(false);
@@ -81,6 +90,31 @@ const Profile = () => {
         dispatch(logout(navigate, setAuthLoading));
     };
 
+    const handleUpdateUser = () => {
+        api.put('/api/user/profile-information', user).then(() => {
+            toast.success('Successfully Updated User Information', {autoClose: 2000});
+            setUserError([]);
+        }).catch(err => {
+            toast.error('Failed to Update User Information', {autoClose: 2000});
+            setUserError(err.response.data.errors);
+        })
+    }
+
+    const handleUpdatePassword = () => {
+        api.put('/api/user/password', updatePassword).then(() => {
+            toast.success('Successfully Updated Password Information', {autoClose: 2000});
+            setUpdatePassword({
+                current_password: '',
+                password: '',
+                password_confirmation: '',
+            });
+            setPasswordError([]);
+        }).catch(err => {
+            toast.error('Failed to Update Password Information', {autoClose: 2000});
+            setPasswordError(err.response.data.errors);
+        })
+    }
+
     useEffect(() => {
         if (!isLoggedIn()) {
             navigate('/login')
@@ -113,33 +147,53 @@ const Profile = () => {
                                     ?
                                     <Skeleton variant="rectangular" height={50}/>
                                     :
-                                    <div className="card-body">
-                                        <h5 className="card-title">
-                                            Hi, {user.first_name}!
-                                        </h5>
-                                        <Button component={Link} to="/home" variant="link" color="primary">
-                                            Go to Home
-                                        </Button>
-                                        <Button
-                                            onClick={has2FA ? handleDisable : handleEnable}
-                                            variant="link"
-                                            color="primary"
-                                            disabled={twoFALoading}
-                                        >
-                                            {has2FA ? 'Disable 2FA' : 'Enable 2FA'}
-                                        </Button>
-                                        {
-                                            has2FA &&
+                                    <Grid container spacing={3} className="card-body">
+                                        <Grid item xs={12}>
+                                            <h5 className="card-title">
+                                                Hi, {user.first_name} {user.middle_name[0]}. {user.last_name}!
+                                            </h5>
+                                        </Grid>
+                                        <UpdateUser
+                                            user={user}
+                                            setUser={setUser}
+                                            handleUpdateUser={handleUpdateUser}
+                                            userError={userError}
+                                        />
+                                        <UpdatePassword
+                                            updatePassword={updatePassword}
+                                            setUpdatePassword={setUpdatePassword}
+                                            handleUpdatePassword={handleUpdatePassword}
+                                            passwordError={passwordError}
+                                        />
+                                        <Grid item xs={12}>
                                             <Button
-                                                onClick={handleView2FA}
+                                                onClick={has2FA ? handleDisable : handleEnable}
                                                 variant="link"
                                                 color="primary"
                                                 disabled={twoFALoading}
                                             >
-                                                View Recovery Codes
+                                                {has2FA ? 'Disable 2FA' : 'Enable 2FA'}
                                             </Button>
+                                        </Grid>
+                                        {
+                                            has2FA &&
+                                            <Grid item xs={12}>
+                                                <Button
+                                                    onClick={handleView2FA}
+                                                    variant="link"
+                                                    color="primary"
+                                                    disabled={twoFALoading}
+                                                >
+                                                    View Recovery Codes
+                                                </Button>
+                                            </Grid>
                                         }
-                                    </div>
+                                        <Grid item xs={12}>
+                                            <Button component={Link} to="/home" variant="link" color="primary">
+                                                Go to Home
+                                            </Button>
+                                        </Grid>
+                                    </Grid>
                             }
                             <div className="card-body">
                                 <Button variant="contained" color="primary" onClick={handleLogout}
