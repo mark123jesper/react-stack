@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import React from "react";
+import {Navigate, Route, Routes} from "react-router-dom";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
@@ -7,6 +7,8 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 
 function _APP() {
     return (
@@ -18,6 +20,8 @@ function _APP() {
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/register" element={<Register />} />
+            <Route exact path="/forgot-password" element={<ForgotPassword />} />
+            <Route exact path="/reset-password/:token" element={<ResetPassword />} />
             <Route exact path="/profile" element={<Profile />} />
             <Route path="*" element={<Navigate to="/home" />} />
         </Routes>

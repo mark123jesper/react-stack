@@ -43,7 +43,7 @@ const Dashboard = () => {
                                     :
                                     <div className="card-body">
                                         <h5 className="card-title">
-                                            Hi, {user.first_name} {user.middle_name[0]}. {user.last_name}!
+                                            This is the Dashboard Component
                                         </h5>
                                         <Button component={Link} to="/home" variant="link" color="primary">
                                             Go to Home

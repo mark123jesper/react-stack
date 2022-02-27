@@ -1,7 +1,7 @@
 import React, {Fragment, useEffect} from 'react'
 
 import {useDispatch} from 'react-redux'
-import {Link, useNavigate} from 'react-router-dom'
+import {Link, useNavigate, useParams} from 'react-router-dom'
 
 import {login, twoFactorLogin} from '../store/auth/actions'
 
@@ -122,6 +122,9 @@ const Login = () => {
                                     <Button variant="contained" color="primary" onClick={handleLogin}
                                             disabled={loading}>
                                         Login
+                                    </Button>
+                                    <Button component={Link} to={"/forgot-password"} variant="link" color="primary">
+                                        Problem logging in? Click here to reset your password.
                                     </Button>
                                     <Button component={Link} to={"/register"} variant="link" color="primary">
                                         Don't have an account? Register here

@@ -51,6 +51,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 $limiter = config('fortify.limiters.login');
 $twoFactorLimiter = config('fortify.limiters.two-factor');
 $verificationLimiter = config('fortify.limiters.verification', '6,1');
+$enableViews = config('fortify.views', true);
 
 // Login...
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])
@@ -69,6 +70,21 @@ Route::post('/two-factor-challenge', [TwoFactorAuthenticatedSessionController::c
 // Registration...
 if (Features::enabled(Features::registration())) {
     Route::post('/register', [RegisteredUserController::class, 'store'])
+        ->middleware(['guest:' . config('fortify.guard')]);
+}
+
+// Password Reset...
+if (Features::enabled(Features::resetPasswords())) {
+//    if ($enableViews) {
+//        Route::get('/reset-password/{token}', [NewPasswordController::class, 'create'])
+//            ->middleware(['guest:' . config('fortify.guard')])
+//            ->name('password.reset');
+//    }
+
+    Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])
+        ->middleware(['guest:' . config('fortify.guard')]);
+
+    Route::post('/reset-password', [NewPasswordController::class, 'store'])
         ->middleware(['guest:' . config('fortify.guard')]);
 }
 
@@ -111,26 +127,15 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
             ->middleware($twoFactorMiddleware);
     }
 
-//    // Password Reset...
-//    if (Features::enabled(Features::resetPasswords())) {
-//        if ($enableViews) {
-//            Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])
-//                ->middleware(['guest:'.config('fortify.guard')])
-//                ->name('password.request');
-//
-//            Route::get('/reset-password/{token}', [NewPasswordController::class, 'create'])
-//                ->middleware(['guest:'.config('fortify.guard')])
-//                ->name('password.reset');
-//        }
-//
-//        Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])
-//            ->middleware(['guest:'.config('fortify.guard')])
-//            ->name('password.email');
-//
-//        Route::post('/reset-password', [NewPasswordController::class, 'store'])
-//            ->middleware(['guest:'.config('fortify.guard')])
-//            ->name('password.update');
-//    }
+    // Update Profile Information...
+    if (Features::enabled(Features::updateProfileInformation())) {
+        Route::put('/user/profile-information', [ProfileInformationController::class, 'update']);
+    }
+
+    // Update Passwords...
+    if (Features::enabled(Features::updatePasswords())) {
+        Route::put('/user/password', [PasswordController::class, 'update']);
+    }
 //
 //    // Email Verification...
 //    if (Features::enabled(Features::emailVerification())) {
@@ -147,20 +152,6 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
 //        Route::post('/email/verification-notification', [EmailVerificationNotificationController::class, 'store'])
 //            ->middleware([config('fortify.auth_middleware', 'auth').':'.config('fortify.guard'), 'throttle:'.$verificationLimiter])
 //            ->name('verification.send');
-//    }
-//
-//    // Profile Information...
-//    if (Features::enabled(Features::updateProfileInformation())) {
-//        Route::put('/user/profile-information', [ProfileInformationController::class, 'update'])
-//            ->middleware([config('fortify.auth_middleware', 'auth').':'.config('fortify.guard')])
-//            ->name('user-profile-information.update');
-//    }
-//
-//    // Passwords...
-//    if (Features::enabled(Features::updatePasswords())) {
-//        Route::put('/user/password', [PasswordController::class, 'update'])
-//            ->middleware([config('fortify.auth_middleware', 'auth').':'.config('fortify.guard')])
-//            ->name('user-password.update');
 //    }
 //
 });
