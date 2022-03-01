@@ -13,10 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< HEAD
 //Route::get('/{path?}', function () {
 //
 //});
 
+=======
+>>>>>>> 87c4e159610d488bdf1d6ce5dbbb0568ab971956
 Route::get('{all}', function () {
     return view('welcome');
 })->where(['all' => '.*']);

@@ -9,6 +9,7 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
+import EmailVerify from "./pages/EmailVerify";
 
 function _APP() {
     return (
@@ -22,6 +23,7 @@ function _APP() {
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/forgot-password" element={<ForgotPassword />} />
             <Route exact path="/reset-password/:token" element={<ResetPassword />} />
+            <Route exact path="/verify-email" element={<EmailVerify />} />
             <Route exact path="/profile" element={<Profile />} />
             <Route path="*" element={<Navigate to="/home" />} />
         </Routes>

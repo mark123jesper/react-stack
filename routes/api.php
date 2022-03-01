@@ -35,8 +35,14 @@ use Laravel\Fortify\Http\Controllers\VerifyEmailController;
 */
 
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return new UserResource(Auth::user());
+//Route::middleware(['auth:sanctum', 'verified'])->get('/user', function () {
+//    return new UserResource(Auth::user());
+//});
+
+Route::group(['middleware' => ['auth:sanctum'], 'prefix' => '/'], function () {
+    Route::get('/user', function () {
+        return new UserResource(Auth::user());
+    });
 });
 
 /*
@@ -48,94 +54,89 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 /*
  * Route for Sanctum and FOrtify Authentication
  */
-$limiter = config('fortify.limiters.login');
-$twoFactorLimiter = config('fortify.limiters.two-factor');
-$verificationLimiter = config('fortify.limiters.verification', '6,1');
-$enableViews = config('fortify.views', true);
 
-// Login...
-Route::post('/login', [AuthenticatedSessionController::class, 'store'])
-    ->middleware(array_filter([
-        'guest:' . config('fortify.guard'),
-        $limiter ? 'throttle:' . $limiter : null,
-    ]));
-
-// Two Factor Authentication...
-Route::post('/two-factor-challenge', [TwoFactorAuthenticatedSessionController::class, 'store'])
-    ->middleware(array_filter([
-        'guest:' . config('fortify.guard'),
-        $twoFactorLimiter ? 'throttle:' . $twoFactorLimiter : null,
-    ]));
-
-// Registration...
-if (Features::enabled(Features::registration())) {
-    Route::post('/register', [RegisteredUserController::class, 'store'])
-        ->middleware(['guest:' . config('fortify.guard')]);
-}
-
-// Password Reset...
-if (Features::enabled(Features::resetPasswords())) {
-//    if ($enableViews) {
-//        Route::get('/reset-password/{token}', [NewPasswordController::class, 'create'])
-//            ->middleware(['guest:' . config('fortify.guard')])
-//            ->name('password.reset');
+//$limiter = config('fortify.limiters.login');
+//$twoFactorLimiter = config('fortify.limiters.two-factor');
+//$verificationLimiter = config('fortify.limiters.verification', '6,1');
+//$enableViews = config('fortify.views', true);
+//
+//// Login...
+//Route::post('/login', [AuthenticatedSessionController::class, 'store'])
+//    ->middleware(array_filter([
+//        'guest:' . config('fortify.guard'),
+//        $limiter ? 'throttle:' . $limiter : null,
+//    ]));
+//
+//// Two Factor Authentication...
+//Route::post('/two-factor-challenge', [TwoFactorAuthenticatedSessionController::class, 'store'])
+//    ->middleware(array_filter([
+//        'guest:' . config('fortify.guard'),
+//        $twoFactorLimiter ? 'throttle:' . $twoFactorLimiter : null,
+//    ]));
+//
+//// Registration...
+//if (Features::enabled(Features::registration())) {
+//    Route::post('/register', [RegisteredUserController::class, 'store'])
+//        ->middleware(['guest:' . config('fortify.guard')]);
+//}
+//
+//// Password Reset...
+//if (Features::enabled(Features::resetPasswords())) {
+//    Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])
+//        ->middleware(['guest:' . config('fortify.guard')]);
+//
+//    Route::post('/reset-password', [NewPasswordController::class, 'store'])
+//        ->middleware(['guest:' . config('fortify.guard')]);
+//}
+//
+//Route::group(['middleware' => 'auth:sanctum'], function () {
+//    // Authentication...
+//    Route::post('/logout', [AuthenticatedSessionController::class, 'destroy']);
+//
+//    // Password Confirmation...
+//    Route::post('/user/confirm-password', [ConfirmablePasswordController::class, 'store']);
+//    Route::get('/user/confirmed-password-status', [ConfirmedPasswordStatusController::class, 'show']);
+//
+//    // Two Factor Authentication...
+//    if (Features::enabled(Features::twoFactorAuthentication())) {
+//        $twoFactorMiddleware = Features::optionEnabled(Features::twoFactorAuthentication(), 'confirmPassword')
+//            ? ['password.confirm']
+//            : [];
+//
+//        // Enable 2FA Confirmation
+//        Route::post('/user/two-factor-authentication', [TwoFactorAuthenticationController::class, 'store'])
+//            ->middleware($twoFactorMiddleware);
+//
+//        // Disable 2FA
+//        Route::delete('/user/two-factor-authentication', [TwoFactorAuthenticationController::class, 'destroy'])
+//            ->middleware($twoFactorMiddleware);
+//
+//        // Confirm 2FA Code
+//        Route::post('/user/confirmed-two-factor-authentication', [ConfirmedTwoFactorAuthenticationController::class, 'store'])
+//            ->middleware($twoFactorMiddleware);
+//
+//        // Two Factor Authentication QR Code
+//        Route::get('/user/two-factor-qr-code', [TwoFactorQrCodeController::class, 'show'])
+//            ->middleware($twoFactorMiddleware);
+//
+//        // Two Factor Recovery Codes
+//        Route::get('/user/two-factor-recovery-codes', [RecoveryCodeController::class, 'index'])
+//            ->middleware($twoFactorMiddleware);
+//
+//        // Generate New Recovery Codes
+//        Route::post('/user/two-factor-recovery-codes', [RecoveryCodeController::class, 'store'])
+//            ->middleware($twoFactorMiddleware);
 //    }
-
-    Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])
-        ->middleware(['guest:' . config('fortify.guard')]);
-
-    Route::post('/reset-password', [NewPasswordController::class, 'store'])
-        ->middleware(['guest:' . config('fortify.guard')]);
-}
-
-Route::group(['middleware' => 'auth:sanctum'], function () {
-    // Authentication...
-    Route::post('/logout', [AuthenticatedSessionController::class, 'destroy']);
-
-    // Password Confirmation...
-    Route::post('/user/confirm-password', [ConfirmablePasswordController::class, 'store']);
-    Route::get('/user/confirmed-password-status', [ConfirmedPasswordStatusController::class, 'show']);
-
-    // Two Factor Authentication...
-    if (Features::enabled(Features::twoFactorAuthentication())) {
-        $twoFactorMiddleware = Features::optionEnabled(Features::twoFactorAuthentication(), 'confirmPassword')
-            ? ['password.confirm']
-            : [];
-
-        // Enable 2FA Confirmation
-        Route::post('/user/two-factor-authentication', [TwoFactorAuthenticationController::class, 'store'])
-            ->middleware($twoFactorMiddleware);
-
-        // Disable 2FA
-        Route::delete('/user/two-factor-authentication', [TwoFactorAuthenticationController::class, 'destroy'])
-            ->middleware($twoFactorMiddleware);
-
-        // Confirm 2FA Code
-        Route::post('/user/confirmed-two-factor-authentication', [ConfirmedTwoFactorAuthenticationController::class, 'store'])
-            ->middleware($twoFactorMiddleware);
-
-        // Two Factor Authentication QR Code
-        Route::get('/user/two-factor-qr-code', [TwoFactorQrCodeController::class, 'show'])
-            ->middleware($twoFactorMiddleware);
-
-        // Two Factor Recovery Codes
-        Route::get('/user/two-factor-recovery-codes', [RecoveryCodeController::class, 'index'])
-            ->middleware($twoFactorMiddleware);
-
-        // Generate New Recovery Codes
-        Route::post('/user/two-factor-recovery-codes', [RecoveryCodeController::class, 'store'])
-            ->middleware($twoFactorMiddleware);
-    }
-
-    // Update Profile Information...
-    if (Features::enabled(Features::updateProfileInformation())) {
-        Route::put('/user/profile-information', [ProfileInformationController::class, 'update']);
-    }
-
-    // Update Passwords...
-    if (Features::enabled(Features::updatePasswords())) {
-        Route::put('/user/password', [PasswordController::class, 'update']);
-    }
+//
+//    // Update Profile Information...
+//    if (Features::enabled(Features::updateProfileInformation())) {
+//        Route::put('/user/profile-information', [ProfileInformationController::class, 'update']);
+//    }
+//
+//    // Update Passwords...
+//    if (Features::enabled(Features::updatePasswords())) {
+//        Route::put('/user/password', [PasswordController::class, 'update']);
+//    }
 //
 //    // Email Verification...
 //    if (Features::enabled(Features::emailVerification())) {
@@ -154,4 +155,4 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
 //            ->name('verification.send');
 //    }
 //
-});
+//});

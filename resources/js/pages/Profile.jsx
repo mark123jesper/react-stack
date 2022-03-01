@@ -100,6 +100,14 @@ const Profile = () => {
         })
     }
 
+    const handleResend = () =>{
+        api.post('/api/email/verification-notification', user.email).then(res => {
+            toast.success(res.data.message);
+        }).catch(err => {
+            setErrors(err.response.data.errors);
+        })
+    }
+
     const handleUpdatePassword = () => {
         api.put('/api/user/password', updatePassword).then(() => {
             toast.success('Successfully Updated Password Information', {autoClose: 2000});
@@ -148,6 +156,15 @@ const Profile = () => {
                                     <Skeleton variant="rectangular" height={50}/>
                                     :
                                     <Grid container spacing={3} className="card-body">
+                                        {
+                                            user.isVerified ?
+                                                null :
+                                                <Grid item xs={12}>
+                                                    <Button variant="contained" color="primary" onClick={handleResend}>
+                                                        Resend Email Verification
+                                                    </Button>
+                                                </Grid>
+                                        }
                                         <Grid item xs={12}>
                                             <h5 className="card-title">
                                                 Hi, {user.first_name} {user.middle_name[0]}. {user.last_name}!
