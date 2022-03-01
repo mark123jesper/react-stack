@@ -1,6 +1,7 @@
 <?php
 
 //use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TokenAuthController;
 use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -39,10 +40,20 @@ use Laravel\Fortify\Http\Controllers\VerifyEmailController;
 //    return new UserResource(Auth::user());
 //});
 
-Route::group(['middleware' => ['auth:sanctum'], 'prefix' => '/'], function () {
+Route::group(['middleware' => 'auth:sanctum', 'prefix' => '/'], function () {
     Route::get('/user', function () {
         return new UserResource(Auth::user());
     });
+    /*
+     * Logout Route for Mobile App (Sanctum Token-based Authentication)
+     */
+    Route::delete('/auth/token', [TokenAuthController::class, 'destroy']);
+});
+/*
+ * Login Route for Mobile App (Sanctum Token-based Authentication)
+ */
+Route::group(['middleware' => 'guest', 'prefix' => '/'], function () {
+    Route::post('/auth/token', [TokenAuthController::class, 'store']);
 });
 
 /*
