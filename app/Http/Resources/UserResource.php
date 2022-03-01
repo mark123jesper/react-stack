@@ -21,6 +21,7 @@ class UserResource extends JsonResource
             'last_name' => $this->last_name,
             'email' => $this->email,
             'has2FA' => $this->two_factor_secret ? true : false,
+            'isVerified' => $this->hasVerifiedEmail(),
         ];
     }
 }
