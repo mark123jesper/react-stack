@@ -46,7 +46,7 @@ class AppServiceProvider extends ServiceProvider
                     'id'   => $notifiable->getKey(),
                     'hash' => sha1($notifiable->getEmailForVerification()),
                 ],
-                true
+                false
             );
             return url("/verify-email?url=".urlencode($url));
         });
